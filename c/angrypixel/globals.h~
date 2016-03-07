@@ -1,0 +1,20 @@
+/*Global definitions !!!MIGHT CAUSE ERRORS!!!*/ 
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 32
+
+/*Declare gameworld-related functions*/
+uint8_t * get_state();
+
+/*Declare display-related functions*/
+void display_state();
+uint8_t spi_send_recv(uint8_t data);
+
+
+/*Game world declarations*/
+volatile uint8_t current_state[SCREEN_WIDTH][SCREEN_HEIGHT];
+
+/*GFX declarations*/
+extern const uint8_t const icon[128];
+
+
+
