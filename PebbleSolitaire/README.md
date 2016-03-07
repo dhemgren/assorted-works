@@ -1,0 +1,1 @@
+# Imperative solution to Kattis problem id:pebblesolitaire
