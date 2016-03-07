@@ -1,1 +1,2 @@
-# Imperative solution to Kattis problem id:pebblesolitaire
+## Imperative Pebble Solitaire solution
+### Kattis problem id:pebblesolitaire
