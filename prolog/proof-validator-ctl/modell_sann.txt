@@ -1,0 +1,23 @@
+% Angränsande tillstånd, modell M
+[
+    [enter_username, [enter_password]],
+    [enter_password, [menu]],
+    [menu, [enter_username, withdraw, deposit]],
+    [withdraw, [menu]],
+    [deposit, [menu]]
+].
+
+% Egenskaper för tillstånd, modell M
+[
+    [enter_username, []],
+    [enter_password, []],
+    [menu, [l]],
+    [withdraw, [l]],
+    [deposit, [l]]
+].
+
+% Starttillstånd
+enter_username.
+
+% Formel att kolla
+ef(eg(l)).
