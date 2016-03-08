@@ -1,1 +1,3 @@
-## Java code written by Dan Hemgren (primarily school projects, assignments)
+Java code excerpts written by Dan Hemgren (unless otherwise stated).
+
+Primarily school projects and assignments.
