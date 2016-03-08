@@ -1,0 +1,19 @@
+% Adjacency lists of LTS
+[
+    [s0, [s1, s2]],
+    [s1, [s2]],
+    [s2, [s2]]
+].
+
+% Labeling of LTS
+[
+    [s0, [r, p, ost]],
+    [s1, [r, danxx]],
+    [s2, [r, b]]
+].
+
+% Starting state
+s0.
+
+% Formel att kolla
+neg(p).
