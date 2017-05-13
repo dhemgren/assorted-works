@@ -1,5 +1,5 @@
 # Concordance Lookup
-written by Dan Hemgren & Ernst Widerberg
+<sup>written by Dan Hemgren & Ernst Widerberg</sup>
 
 
 This program builds a concordance database over the given input text file and enables fast word lookup via binary search.
