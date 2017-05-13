@@ -1,0 +1,5 @@
+/bin/
+tokenizer
+out.txt
+make-index
+*.o
