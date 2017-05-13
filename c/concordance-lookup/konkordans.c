@@ -22,7 +22,7 @@ static void print_occurrences(FILE*, FILE*, FILE*, int);
 
 int main(int argc, char *argv[]) {
 
-    if(argc < 3){
+    if(argc != 3){
         printf("\n Ange parametrar [ord] [korpus] \n");
     }
 
