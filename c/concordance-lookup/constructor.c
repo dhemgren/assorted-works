@@ -16,10 +16,10 @@ int hash_table_prefix_end[HASH_TABLE_SIZE];
 static void close_files(void);
 
 int main(int argc, char * argv[]){
-    word_index = fopen("/var/tmp/ewdh-word_index.bin", "w");
-    words = fopen("/var/tmp/ewdh-words.txt", "w");
-    occurrence_index = fopen("/var/tmp/ewdh-occurrence_index.bin", "w");
-    occurrences = fopen("/var/tmp/ewdh-occurrences.bin", "w");
+    word_index = fopen("bin/word_index.bin", "w");
+    words = fopen("bin/words.txt", "w");
+    occurrence_index = fopen("bin/occurrence_index.bin", "w");
+    occurrences = fopen("bin/occurrences.bin", "w");
 
     char char_buffer[STATIC_ARRAY_SIZE];
     int char_buffer_len = 0; 
@@ -151,11 +151,11 @@ void end_of_occurrence(int new_occurrence) {
 
 // Skriv hela hashtabellen till fil
 void write_hash_tables_to_file(void) {
-    FILE *hash_file_start = fopen("/var/tmp/ewdh-hash_start.bin", "w");
+    FILE *hash_file_start = fopen("bin/hash_start.bin", "w");
     fwrite(hash_table_prefix_start, sizeof(hash_table_prefix_start), 1, hash_file_start);
     fclose(hash_file_start);
 
-    FILE *hash_file_end = fopen("/var/tmp/ewdh-hash_end.bin", "w");
+    FILE *hash_file_end = fopen("bin/hash_end.bin", "w");
     fwrite(hash_table_prefix_end, sizeof(hash_table_prefix_end), 1, hash_file_end);
     fclose(hash_file_end);
 }

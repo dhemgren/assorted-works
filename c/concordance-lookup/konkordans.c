@@ -22,16 +22,20 @@ static void print_occurrences(FILE*, FILE*, FILE*, int);
 
 int main(int argc, char *argv[]) {
 
+    if(argc < 3){
+        printf("\n Ange parametrar [ord] [korpus] \n");
+    }
+
     // Öppna alla filer som ska läsas.
-    words = fopen("/var/tmp/ewdh-words.txt", "r");
-    word_index = fopen("/var/tmp/ewdh-word_index.bin", "r");
-    occurrences = fopen("/var/tmp/ewdh-occurrences.bin", "r");
-    occurrence_index = fopen("/var/tmp/ewdh-occurrence_index.bin", "r");
+    words = fopen("bin/words.txt", "r");
+    word_index = fopen("bin/word_index.bin", "r");
+    occurrences = fopen("bin/occurrences.bin", "r");
+    occurrence_index = fopen("bin/occurrence_index.bin", "r");
 
-    hash_file_start = fopen("/var/tmp/ewdh-hash_start.bin", "r");
-    hash_file_end = fopen("/var/tmp/ewdh-hash_end.bin", "r");
+    hash_file_start = fopen("bin/hash_start.bin", "r");
+    hash_file_end = fopen("bin/hash_end.bin", "r");
 
-    corpus = fopen("/info/adk16/labb1/korpus", "r");
+    corpus = fopen(argv[2], "r");
 
     // Läs in hela hashtabellen i internminnet.
     fread(prefix_start, HASH_TABLE_SIZE * sizeof(int), 1, hash_file_start);
