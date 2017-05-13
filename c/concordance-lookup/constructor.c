@@ -22,7 +22,7 @@ int main(int argc, char * argv[]){
     occurrences = fopen("/var/tmp/ewdh-occurrences.bin", "w");
 
     char char_buffer[STATIC_ARRAY_SIZE];
-    int char_buffer_len = 0; // length of char_buffer
+    int char_buffer_len = 0; 
 
     char current_word[STATIC_ARRAY_SIZE];
 
@@ -32,7 +32,7 @@ int main(int argc, char * argv[]){
         hash_table_prefix_end[i] = -1;
     }
 
-    int c; // character to switch on
+    int c;
     while (1) {
         switch (c = getchar()) {
             case EOF:

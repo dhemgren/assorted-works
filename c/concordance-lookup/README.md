@@ -1,14 +1,4 @@
-# ADK Lab 1
+# File lookup using concordance database, binary search
 
-För komplett lydelse, se https://www.kth.se/social/course/DD1352/subgroup/ht-2016-463/page/labb-1-20/
-
-## Todo
-
-- ~~`LC_COLLATE` sätts nog aldrig i vår makefile. Sort verkar funka som den ska ändå?~~
-- ~~BUG: å ä ö vid hashning -> segfault~~
-- I senaste buggfixen ändrade jag hashfunktionen till bas 30, och ökade hashtabellens storlek till 28000. Det var nog onödigt.
-- Se till att allt som allokeras med `malloc` också deallokeras med `free`.
-
-Om problem uppstår:
-
-- Vi har använt signed/unsigned lite inkonsekvent.
+This program builds a concordance database over the given input text file and enables fast word lookup via binary search.
+The database points to byte positions in the specified text file _on disk_ and binary search is performed over these positions rather than in the file directly, resulting in fast word lookup without having to load the (potentially large) file into memory once the initial single-pass preprocessing of the text file has been performed. 

@@ -16,16 +16,6 @@ int midpoint(int l, int r) {
     int d = c * 4;
 }
 
-int main(int argc, char *argv[]) {
-    /* FILE *hash_table_file = fopen("/var/tmp/ewdh-hash.bin", "r"); */
-    /* int hash_table[HASH_TABLE_SIZE]; */
-    /* fread(hash_table, HASH_TABLE_SIZE * sizeof(int), 1, hash_table_file); */
-    /* printf("%d\n", hash_table[prefix_hash(argv[1])]); */
-
-    find_largest_prefix_group();
-    /* test_hash_function(argv[1]); */
-}
-
 static void test_words_and_occs(int byte_pos) {
     FILE *words = fopen("/var/tmp/ewdh-words.txt", "r");
     FILE *word_index = fopen("/var/tmp/ewdh-word_index.bin", "r");
